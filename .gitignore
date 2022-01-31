@@ -1,0 +1,13 @@
+.ncache/*
+volumes/mysql/pool
+volumes/logs/laravel
+volumes/logs/nginx
+volumes/logs/php-fpm
+volumes/home/*
+volumes/mysql/pool/*
+volumes/www/*
+target/
+
+.env
+automated_*.yaml
+!.gitkeep

@@ -1,0 +1,18 @@
+php-fpm:
+  container_name: php-fpm
+  image: php:20201203
+  build: ./services/php-fpm
+  command: bash -c 'usermod -o -u ${USER_ID} www-data; groupmod -o -g ${USER_ID} www-data; php-fpm'
+  environment:
+    TZ: Asia/Tokyo
+  logging:
+    driver: json-file
+    options:
+      max-file: "3"
+      max-size: 10m
+  networks:
+    - network
+  volumes:
+    - ./services/php-fpm/php.ini.main:/usr/local/etc/php/php.ini
+    - ../volumes/www:/var/www
+    - ../volumes/logs/php-fpm:/var/log/php-fpm

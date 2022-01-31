@@ -1,0 +1,9 @@
+version: "3"
+networks:
+  network:
+    driver: bridge
+services:
+  import: docker_settings/services/nginx/nginx.yaml
+  import: docker_settings/services/rust/rust.yaml
+  import: docker_settings/services/mysql/mysql.yaml
+  import: docker_settings/services/phpmyadmin/phpmyadmin.yaml
