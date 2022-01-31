@@ -1,0 +1,3 @@
+[submodule "volumes/home/ncms-lambda-rs"]
+	path = volumes/home/ncms-lambda-rs
+	url = git@github.com:n0pj/ncms-lambda-rs.git
